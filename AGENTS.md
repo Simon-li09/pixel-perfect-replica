@@ -28,3 +28,4 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+- New UI code is JavaScript/JSX (.jsx/.js) per client spec; route files are .jsx thin wrappers that import page components from src/pages. __root.tsx stays as framework shell.
