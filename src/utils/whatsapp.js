@@ -1,6 +1,9 @@
-// Placeholder number — replace with the real Magabus Hub WhatsApp number (international format, digits only).
-export const WHATSAPP_NUMBER = "2348000000000";
+export const WHATSAPP_LINK = "https://wa.me/message/STI4ZMOOTCNNH1";
+export const TELEGRAM_LINK = "https://t.me/+BM8JtVl9Z88wN2M0";
 
-export function whatsappLink(message = "Hello Magabus Hub, I'd like to make an enquiry.") {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+export function whatsappLink(message = "") {
+  if (message) {
+    return `${WHATSAPP_LINK}?text=${encodeURIComponent(message)}`;
+  }
+  return WHATSAPP_LINK;
 }

@@ -1,28 +1,83 @@
 import { Link } from "@tanstack/react-router";
-import { Sparkles } from "lucide-react";
-import heroImg from "@/assets/hero-tech.jpg";
-import { whatsappLink } from "@/utils/whatsapp";
+import { Play, Code2, Globe, Briefcase } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="bg-soft-gradient">
-      <div className="container-page grid items-center gap-12 py-16 md:py-24 lg:grid-cols-2">
-        <div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-card px-4 py-1.5 text-sm font-medium text-primary shadow-card"><Sparkles className="h-4 w-4 text-accent" /> Technology · Learning · Growth</span>
-          <h1 className="mt-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">Your Digital World. <span className="text-brand-gradient">Without Limits.</span></h1>
-          <p className="mt-5 max-w-xl text-lg text-muted-foreground">Magabus Hub delivers digital services, practical tech courses and support plans that help individuals and businesses thrive online.</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/services" className="btn-primary">Explore Services</Link>
-            <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn-outline">Chat on WhatsApp</a>
-          </div>
-          <div className="mt-10 flex gap-8">
-            {[["500+", "Students trained"], ["6", "Service areas"], ["24/7", "WhatsApp support"]].map(([n, l]) => (
-              <div key={l}><p className="font-display text-2xl font-bold text-primary">{n}</p><p className="text-xs text-muted-foreground">{l}</p></div>
-            ))}
-          </div>
+    <div
+      className="relative overflow-hidden rounded-2xl mx-4 mt-4"
+      style={{
+        background: "linear-gradient(135deg, oklch(0.19 0.08 285) 0%, oklch(0.14 0.04 265) 60%, oklch(0.12 0.02 265) 100%)",
+        minHeight: "220px",
+      }}
+    >
+      {/* Glow blobs */}
+      <div
+        className="pointer-events-none absolute -top-16 -left-16 h-64 w-64 rounded-full opacity-30"
+        style={{ background: "radial-gradient(circle, oklch(0.52 0.22 285), transparent 70%)" }}
+      />
+      <div
+        className="pointer-events-none absolute -bottom-20 right-32 h-72 w-72 rounded-full opacity-20"
+        style={{ background: "radial-gradient(circle, oklch(0.52 0.22 300), transparent 70%)" }}
+      />
+
+      <div className="relative z-10 flex items-center gap-6 px-7 py-7">
+        {/* Text */}
+        <div className="flex-1 min-w-0">
+          <h1 className="font-display text-2xl font-bold leading-snug text-white sm:text-3xl">
+            Welcome to{" "}
+            <span
+              style={{
+                background: "linear-gradient(90deg, oklch(0.72 0.17 182), oklch(0.65 0.22 300))",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}
+            >
+              Magabus Hub!
+            </span>
+          </h1>
+          <p className="mt-2 max-w-sm text-sm text-white/75 leading-relaxed">
+            Learn how to generate your own working tools and websites for any job —{" "}
+            <span className="font-semibold" style={{ color: "var(--gold)" }}>
+              even with no coding experience!
+            </span>
+          </p>
+          <Link
+            to="/courses"
+            className="btn-primary mt-5 inline-flex !gap-1.5"
+          >
+            <Play className="h-3.5 w-3.5 fill-current" />
+            Start Learning Now →
+          </Link>
         </div>
-        <img src={heroImg} alt="Digital learning and technology illustration" width={1280} height={1024} className="w-full rounded-3xl shadow-card" />
+
+        {/* Feature chips */}
+        <div className="hidden md:flex flex-col gap-2.5 mr-4">
+          {[
+            { icon: Code2, label: "Create Tools" },
+            { icon: Globe,  label: "Build Websites" },
+            { icon: Briefcase, label: "Grow Your Skills" },
+          ].map(({ icon: Icon, label }) => (
+            <div
+              key={label}
+              className="flex items-center gap-2 rounded-xl px-3 py-2 text-xs font-semibold text-white backdrop-blur-sm"
+              style={{ background: "oklch(1 0 0 / 0.08)", border: "1px solid oklch(1 0 0 / 0.12)" }}
+            >
+              <Icon className="h-4 w-4 text-primary" style={{ color: "oklch(0.72 0.17 182)" }} />
+              {label}
+            </div>
+          ))}
+        </div>
+
+        {/* "Build Anything" badge */}
+        <div
+          className="hidden lg:flex flex-col items-center justify-center rounded-2xl px-5 py-4 text-center"
+          style={{ background: "oklch(1 0 0 / 0.05)", border: "1px solid oklch(1 0 0 / 0.10)", minWidth: "120px" }}
+        >
+          <span className="font-display text-lg font-extrabold leading-tight text-white tracking-tight">BUILD</span>
+          <span className="font-display text-lg font-extrabold leading-tight text-white tracking-tight">ANYTHING</span>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
