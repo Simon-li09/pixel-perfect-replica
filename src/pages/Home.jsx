@@ -226,8 +226,8 @@ export default function Home() {
         <div className="flex items-center gap-4 z-10">
           <Rocket className="h-8 w-8 text-white/80 flex-shrink-0" />
           <div>
-            <p className="font-display text-lg font-bold text-white">Build. Launch. Earn.</p>
-            <p className="text-sm text-white/75">With Magabus Hub, you're not just learning — you're building a future in tech!</p>
+            <p className="font-display text-lg font-bold text-white">Join Our Telegram Group</p>
+            <p className="text-sm text-white/75">Get free updates, tips and exclusive content — join us on Telegram!</p>
           </div>
         </div>
 
@@ -235,7 +235,8 @@ export default function Home() {
           href={TELEGRAM_LINK}
           target="_blank"
           rel="noreferrer"
-          className="btn-gold flex-shrink-0 z-10 flex items-center gap-2"
+          className="flex-shrink-0 z-10 flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold transition hover:opacity-90"
+          style={{ background: "#229ED9", color: "#fff" }}
         >
           Join Our Community <ChevronRight className="h-4 w-4" />
         </a>
