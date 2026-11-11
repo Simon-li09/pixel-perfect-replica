@@ -80,7 +80,24 @@ const languages = [
     rating: 5.0,
     topics: [],
   },
+
+{
+    id: "service-5",
+    name: "Website creating ",
+    tagline: "Wallet creating ",
+    description:"You learn how to create an instant online banking website, trading broker, shipping website with tracking code, and learn how to use it you can add you own domain or use a custom domain you don't need a coding experience",
+    color: "#EAB308",
+    bgColor: "oklch(0.20 0.05 90)",
+    badge: "",
+    badgeColor: "#EAB308",
+    level: "Beginner",
+    duration: "",
+    lessons: 0,
+    rating: 5.0,
+    topics: [],
+  },
 ];
+
 
 /* ── Helpers ─────────────────────────────────────────────── */
 function LevelBadge({ level }) {
