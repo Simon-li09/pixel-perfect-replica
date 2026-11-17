@@ -3,12 +3,12 @@ import { Play, ChevronRight, BookOpen, Clock, Star, Zap } from "lucide-react";
 import { whatsappLink } from "@/utils/whatsapp";
 
 /* ── Service data ────────────────────────────────────────── */
-/* 👇 Fill in name, tagline, description, and topics for each service */
 const languages = [
   {
     id: "service-1",
-    name: "Coin flashing ",           // ← add service name here
-    tagline: "Coin flashing",        // ← add short tagline here
+    name: "Coin flashing",
+    tagline: "Coin flashing",
+    color: "#3B82F6",
     bgColor: "oklch(0.20 0.06 250)",
     badge: "",
     badgeColor: "#3B82F6",
@@ -20,7 +20,7 @@ const languages = [
   },
   {
     id: "service-2",
-    name: "Photo editing ",
+    name: "Photo editing",
     tagline: "Photo editing",
     color: "#06B6D4",
     bgColor: "oklch(0.20 0.06 200)",
@@ -34,8 +34,8 @@ const languages = [
   },
   {
     id: "service-3",
-    name: "Sms and email flashing ",
-    tagline: "Sms and email flashing ",
+    name: "Sms and email flashing",
+    tagline: "Sms and email flashing",
     color: "#F97316",
     bgColor: "oklch(0.20 0.06 55)",
     badge: "",
@@ -48,8 +48,8 @@ const languages = [
   },
   {
     id: "service-4",
-    name: "recipe generation ",
-    tagline: "recipe generation ",
+    name: "Recipe generation",
+    tagline: "Recipe generation",
     color: "#22D3EE",
     bgColor: "oklch(0.20 0.05 210)",
     badge: "",
@@ -62,8 +62,8 @@ const languages = [
   },
   {
     id: "service-5",
-    name: "Wallet creating ",
-    tagline: "Wallet creating ",
+    name: "Wallet creating",
+    tagline: "Wallet creating",
     color: "#EAB308",
     bgColor: "oklch(0.20 0.05 90)",
     badge: "",
@@ -74,23 +74,21 @@ const languages = [
     rating: 5.0,
     topics: [],
   },
-
-{
-    id: "service-5",
-    name: "Website creating ",
-    tagline: "Wallet creating ",
-    color: "#EAB308",
-    bgColor: "oklch(0.20 0.05 90)",
+  {
+    id: "service-6",
+    name: "Website creating",
+    tagline: "Website creating",
+    color: "#F87171",
+    bgColor: "oklch(0.20 0.04 20)",
     badge: "",
-    badgeColor: "#EAB308",
-    level: "Beginner",
+    badgeColor: "#F87171",
+    level: "Advanced",
     duration: "",
     lessons: 0,
     rating: 5.0,
     topics: [],
   },
 ];
-
 
 /* ── Helpers ─────────────────────────────────────────────── */
 function LevelBadge({ level }) {
@@ -161,12 +159,10 @@ function LangCard({ lang, onSelect, selected }) {
             {lang.tagline || <span className="italic">— tagline —</span>}
           </p>
         </div>
-        {/* Colour dot */}
         <div
           className="h-3 w-3 rounded-full flex-shrink-0 mt-1"
           style={{ background: lang.color }}
         />
-        {/* Arrow */}
         <ChevronRight
           className="h-4 w-4 flex-shrink-0 mt-0.5 transition-transform duration-200"
           style={{
@@ -175,8 +171,6 @@ function LangCard({ lang, onSelect, selected }) {
           }}
         />
       </div>
-
-      {/* Meta row */}
       <div className="mt-3 flex items-center gap-4 flex-wrap">
         <LevelBadge level={lang.level} />
         {lang.duration && (
@@ -206,7 +200,6 @@ function LangDetail({ lang }) {
         boxShadow: `0 0 0 1px ${lang.color}22, 0 16px 48px ${lang.color}18`,
       }}
     >
-      {/* Header strip */}
       <div
         className="px-6 py-4 flex items-center justify-between gap-4"
         style={{ background: lang.color + "18", borderBottom: `1px solid ${lang.color}33` }}
@@ -229,13 +222,10 @@ function LangDetail({ lang }) {
           <Play className="h-3 w-3 fill-current" /> Enrol Now
         </a>
       </div>
-
-      {/* Body — description + topics only, no code panel */}
       <div className="p-6">
         {lang.description && (
           <p className="text-sm text-muted-foreground leading-relaxed">{lang.description}</p>
         )}
-
         {lang.topics.length > 0 && (
           <>
             <p className="mt-5 font-display text-xs font-bold uppercase tracking-widest text-foreground/60">
@@ -263,14 +253,12 @@ function LangDetail({ lang }) {
 export default function Courses() {
   const [selected, setSelected] = useState(null);
   const [filter, setFilter] = useState("All");
-
   const levels = ["All", "Beginner", "Intermediate", "Advanced"];
   const filtered =
     filter === "All" ? languages : languages.filter((l) => l.level === filter);
 
   return (
     <div className="px-4 py-6 pb-12">
-      {/* Page header */}
       <div className="mb-6 flex items-start justify-between gap-4 flex-wrap">
         <div>
           <div className="flex items-center gap-2 mb-1">
@@ -278,15 +266,12 @@ export default function Courses() {
             <h1 className="font-display text-2xl font-bold text-foreground">Services</h1>
           </div>
           <p className="text-sm text-muted-foreground">
-            Learn 9 professional skills and start building real tools today.
+            Choose a service and get started today.
           </p>
         </div>
-        {/* Stats chips */}
         <div className="flex gap-2 flex-wrap">
           {[
-            { n: "9", label: "Services" },
-            { n: "176+", label: "Total Lessons" },
-            { n: "43 wks", label: "Full Track" },
+            { n: "6", label: "Services" },
           ].map(({ n, label }) => (
             <div
               key={label}
@@ -300,7 +285,6 @@ export default function Courses() {
         </div>
       </div>
 
-      {/* Level filter */}
       <div className="flex gap-2 flex-wrap mb-5">
         {levels.map((l) => (
           <button
@@ -318,7 +302,6 @@ export default function Courses() {
         ))}
       </div>
 
-      {/* Grid of service cards */}
       <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 mb-5">
         {filtered.map((lang) => (
           <LangCard
@@ -330,14 +313,12 @@ export default function Courses() {
         ))}
       </div>
 
-      {/* Expanded detail — renders below the grid */}
       {selected && (
         <div className="mt-2">
           <LangDetail lang={selected} />
         </div>
       )}
 
-      {/* Bottom CTA */}
       {!selected && (
         <div
           className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-2xl px-6 py-5"
