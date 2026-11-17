@@ -9,8 +9,6 @@ const languages = [
     id: "service-1",
     name: "Coin flashing ",           // ← add service name here
     tagline: "Coin flashing",        // ← add short tagline here
-    description: "You also learn how to flash coins to any wallet and it reflects immediately you only need the wallet address ",    // ← add description here
-    color: "#3B82F6",
     bgColor: "oklch(0.20 0.06 250)",
     badge: "",
     badgeColor: "#3B82F6",
@@ -22,9 +20,8 @@ const languages = [
   },
   {
     id: "service-2",
-    name: "Photo editing and id generation ",
-    tagline: "Photo editing and id generation ",
-    description: "You learn how to edit your working photos and videos, also how to generate international IDs, military IDs, and paperwork for proof, certificates of any kind, USA SSN, and Canada SIN",
+    name: "Photo editing ",
+    tagline: "Photo editing",
     color: "#06B6D4",
     bgColor: "oklch(0.20 0.06 200)",
     badge: "",
@@ -39,7 +36,6 @@ const languages = [
     id: "service-3",
     name: "Sms and email flashing ",
     tagline: "Sms and email flashing ",
-    description: "Send customized sms and emails to any country or generate yours, send email as FBI, Trust Wallet or any crypto app ",
     color: "#F97316",
     bgColor: "oklch(0.20 0.06 55)",
     badge: "",
@@ -52,9 +48,8 @@ const languages = [
   },
   {
     id: "service-4",
-    name: "Transition recipe generation ",
-    tagline: "Transition recipe generation ",
-    description: "Generate any bank or wallet recipe as failed or successful transaction, shopping invoice ",
+    name: "recipe generation ",
+    tagline: "recipe generation ",
     color: "#22D3EE",
     bgColor: "oklch(0.20 0.05 210)",
     badge: "",
@@ -69,7 +64,6 @@ const languages = [
     id: "service-5",
     name: "Wallet creating ",
     tagline: "Wallet creating ",
-    description: "Learn how to create a Cash App and PayPal wallet",
     color: "#EAB308",
     bgColor: "oklch(0.20 0.05 90)",
     badge: "",
@@ -85,7 +79,6 @@ const languages = [
     id: "service-5",
     name: "Website creating ",
     tagline: "Wallet creating ",
-    description:"You learn how to create an instant online banking website, trading broker, shipping website with tracking code, and learn how to use it you can add you own domain or use a custom domain you don't need a coding experience",
     color: "#EAB308",
     bgColor: "oklch(0.20 0.05 90)",
     badge: "",
