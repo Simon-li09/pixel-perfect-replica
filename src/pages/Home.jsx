@@ -9,30 +9,10 @@ import { whatsappLink, TELEGRAM_LINK } from "@/utils/whatsapp";
 
 /* ── First 4 services (mirrors Courses.jsx data) ─────────── */
 const featuredServices = [
-  {
-    id: "service-1",
-    name: "Coin Flashing",
-    description: "Flash coins to any wallet instantly. You only need the wallet address.",
-    color: "#3B82F6",
-  },
-  {
-    id: "service-2",
-    name: "Photo Editing",
-    description: "Edit your photos and videos professionally.",
-    color: "#06B6D4",
-  },
-  {
-    id: "service-3",
-    name: "SMS & Email Flashing",
-    description: "Send customised SMS and emails to any country.",
-    color: "#F97316",
-  },
-  {
-    id: "service-4",
-    name: "Recipe Generation",
-    description: "Generate any bank or wallet receipt as failed or successful transaction.",
-    color: "#22D3EE",
-  },
+  { id: "service-1", name: "Coin Flashing",       color: "#3B82F6" },
+  { id: "service-2", name: "Photo Editing",        color: "#06B6D4" },
+  { id: "service-3", name: "SMS & Email Flashing", color: "#F97316" },
+  { id: "service-4", name: "Recipe Generation",    color: "#22D3EE" },
 ];
 
 /* ── Stats strip ─────────────────────────────────────── */
@@ -94,7 +74,6 @@ function ServiceCard({ service }) {
           Service
         </div>
         <p className="font-display font-bold text-foreground text-sm leading-snug">{service.name}</p>
-        <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed flex-1">{service.description}</p>
         <Link
           to="/courses"
           className="mt-4 flex items-center gap-1.5 rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-foreground hover:bg-secondary transition-colors"
