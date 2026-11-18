@@ -12,25 +12,25 @@ const featuredServices = [
   {
     id: "service-1",
     name: "Coin Flashing",
-    description: "Learn how to flash coins to any wallet — it reflects immediately. You only need the wallet address.",
+    description: "Flash coins to any wallet instantly. You only need the wallet address.",
     color: "#3B82F6",
   },
   {
     id: "service-2",
-    name: "Photo Editing & ID Generation",
-    description: "Edit photos/videos and generate international IDs, military IDs, certificates, USA SSN, Canada SIN and more.",
+    name: "Photo Editing",
+    description: "Edit your photos and videos professionally.",
     color: "#06B6D4",
   },
   {
     id: "service-3",
     name: "SMS & Email Flashing",
-    description: "Send customised SMS and emails to any country, or send email as FBI, Trust Wallet or any crypto app.",
+    description: "Send customised SMS and emails to any country.",
     color: "#F97316",
   },
   {
     id: "service-4",
-    name: "Transaction Receipt Generation",
-    description: "Generate any bank or wallet receipt as failed or successful transaction, plus shopping invoices.",
+    name: "Recipe Generation",
+    description: "Generate any bank or wallet receipt as failed or successful transaction.",
     color: "#22D3EE",
   },
 ];
